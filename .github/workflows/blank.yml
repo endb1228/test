@@ -34,3 +34,12 @@ jobs:
         run: |
           echo Add other actions to build,
           echo test, and deploy your project.
+
+      - name: Set image tag
+        id: set-image-tag
+        env:
+          IMAGE_TAG: 1234
+        run: echo "::set-output name=image_tag::$IMAGE_TAG"
+
+      - name: Get image tag
+        run: echo ${{steps.set-image-tag.env.IMAGE_TAG}}
