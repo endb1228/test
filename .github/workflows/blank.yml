@@ -42,4 +42,4 @@ jobs:
         run: echo "::set-output name=image_tag::$IMAGE_TAG"
 
       - name: Get image tag
-        run: echo ${{jobs.build.steps.set-image-tag.env.IMAGE_TAG}}
+        run: echo ${{steps}}
