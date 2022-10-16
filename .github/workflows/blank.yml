@@ -39,7 +39,7 @@ jobs:
         id: set-image-tag
         env:
           IMAGE_TAG: 1234
-        run: echo "::set-output name=image_tag::$IMAGE_TAG"
+        run: echo "::setOutput name=image_tag::$IMAGE_TAG"
 
       - name: Get image tag
         run: "echo Image tag &#58; ${{steps.set-image-tag.outputs.image_tag}}"
