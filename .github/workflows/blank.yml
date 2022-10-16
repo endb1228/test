@@ -44,3 +44,4 @@ jobs:
       - name: Get image tag
         env:
           MESSAGE: "Image tag: ${{steps.set-image-tag.outputs.image_tag}}"
+        run: echo
