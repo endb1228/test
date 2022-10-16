@@ -42,4 +42,5 @@ jobs:
         run: echo "image_tag=$IMAGE_TAG" >> $GITHUB_OUTPUT
 
       - name: Get image tag
-        run: "echo Image tag: ${{steps.set-image-tag.outputs.image_tag}}"
+        env:
+          MESSAGE: "Image tag: "${{steps.set-image-tag.outputs.image_tag}}
